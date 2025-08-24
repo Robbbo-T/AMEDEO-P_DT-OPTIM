@@ -1,4 +1,10 @@
+# AMEDEO-P DT-OPTIM Project .gitignore
+# Version: 3.0.0
+# Purpose: Exclude generated files, temporary data, and build artifacts
+
+#############################################
 # Python
+#############################################
 __pycache__/
 *.py[cod]
 *$py.class
@@ -23,29 +29,276 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Virtual environments
+#############################################
+# Virtual Environments
+#############################################
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
+.venv/
+.ENV/
 
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Data and temporary files
+#############################################
+# Data Files (Generated & Synthetic)
+#############################################
+# Synthetic data directory
 data/synthetic/
-*.tmp
-*.log
+data/generated/
+data/cache/
+data/temp/
 
-# Generated structures (when testing)
+# Data file formats
+*.csv
+*.json
+*.parquet
+*.pkl
+*.pickle
+*.npy
+*.npz
+*.h5
+*.hdf5
+*.zarr
+*.feather
+*.msgpack
+
+# Large binary files
+*.bin
+*.dat
+*.db
+*.sqlite
+*.sqlite3
+
+#############################################
+# Generated Structure (Optional)
+#############################################
+# Uncomment these lines if you want to exclude generated structure from git
+# This is useful when structure is auto-generated via scripts
+# 03-TECHNICAL-AMEDEO-P/*/*/System-*/
+# STATISTICS.md
+# structure_report.txt
+
+# Test structure builds
+test_builds/
+temp_builds/
 /tmp/AMEDEO-P-DT-OPTIM/
 
-# Test outputs
+#############################################
+# Logs and Temporary Files
+#############################################
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*~
+.~*
+
+# Log directories
+logs/
+*.log.*
+*.pid
+
+#############################################
+# Testing
+#############################################
+.pytest_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
 test_output/
-temp_builds/
+test_results/
+
+#############################################
+# Documentation
+#############################################
+docs/_build/
+docs/.doctrees/
+docs/generated/
+site/
+.mkdocs/
+
+#############################################
+# Jupyter Notebooks
+#############################################
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+#############################################
+# IDE and Editors
+#############################################
+# VSCode
+.vscode/
+*.code-workspace
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*.swn
+.*.swp
+.*.swo
+.*.swn
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Spyder
+.spyderproject
+.spyproject
+
+# Rope
+.ropeproject
+
+#############################################
+# Operating System
+#############################################
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+#############################################
+# Security and Credentials
+#############################################
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+
+# Credentials
+*.pem
+*.key
+*.crt
+*.p12
+credentials/
+secrets/
+config/secrets.yaml
+config/credentials.yaml
+
+#############################################
+# Project Specific
+#############################################
+# Quantum simulation cache
+quantum_cache/
+qiskit_cache/
+
+# ML model files (if too large)
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.pb
+
+# Benchmark results (if generated)
+benchmarks/results/
+performance_reports/
+
+# Generated reports
+reports/generated/
+reports/*.pdf
+reports/*.html
+
+# Temporary CI builds
+ci_builds/
+.ci_cache/
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar.bz2
+*.rar
+*.7z
+
+# Backup files
+backup/
+backups/
+*.backup
+
+#############################################
+# Optional Excludes (Uncomment as needed)
+#############################################
+# If you want to track structure but not contents:
+# 03-TECHNICAL-AMEDEO-P/*/*/*/*/CI-*/*/data/
+
+# If synthetic generators create test data inline:
+# 00-FRAMEWORK/synthetic-core/test_data/
+
+# If using Docker:
+# .dockerignore
+# docker-compose.override.yml
+
+# If using Kubernetes:
+# k8s/secrets/
+# k8s/local/
+
+#############################################
+# Allow Lists (Don't ignore these)
+#############################################
+# Keep configuration templates
+!config/templates/
+!config/examples/
+
+# Keep documentation assets
+!docs/assets/
+!docs/images/
+
+# Keep example data
+!data/examples/
+!data/samples/
+
+# Keep test fixtures
+!tests/fixtures/
+!tests/data/
+
+# Keep GitHub templates
+!.github/
+!.github/ISSUE_TEMPLATE/
+!.github/PULL_REQUEST_TEMPLATE/
