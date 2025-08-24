@@ -1,0 +1,25 @@
+framework:
+  name: AMEDEO-P DT-OPTIM
+  version: 3.0.0
+  type: Reference Architecture
+  
+domains:
+  - name: AIR
+    systems: 1400
+    segments: 7
+  - name: SPACE
+    systems: 700
+    segments: 7
+  - name: DEFENSE
+    systems: 1050
+    segments: 7
+  - name: GROUND
+    systems: 350
+    segments: 7
+  - name: CROSS
+    systems: 420
+    segments: 7
+
+lifecycle_phases: 11
+total_systems: 3920
+total_cis: 39200
