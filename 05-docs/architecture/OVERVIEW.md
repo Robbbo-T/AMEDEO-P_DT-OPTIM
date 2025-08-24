@@ -30,23 +30,23 @@ value: Architectural Patterns for Future Systems
 The DT-OPTIM framework implements a four-layer architecture, each addressing specific aspects of digital twin functionality:
 
 ```mermaid
-graph TB
+flowchart TB
     subgraph "Layer 4: Intelligent Machine"
-        IM[Quantum Processing | AI/ML | Predictive Analytics]
+        IM["Quantum Processing | AI-ML | Predictive Analytics"]
     end
-    
-    subgraph "Layer 3: Technical (AMEDEO-P)"
-        TECH[3,920 Systems across 5 Domains]
+
+    subgraph "Layer 3: Technical AMEDEO-P"
+        TECH["3,920 Systems across 5 Domains"]
     end
-    
+
     subgraph "Layer 2: Procedural"
-        PROC[11-Phase Lifecycle | Workflows | Compliance]
+        PROC["11-Phase Lifecycle | Workflows | Compliance"]
     end
-    
+
     subgraph "Layer 1: Organizational"
-        ORG[Governance | Decision Frameworks | Knowledge]
+        ORG["Governance | Decision Frameworks | Knowledge"]
     end
-    
+
     ORG --> PROC
     PROC --> TECH
     TECH --> IM
