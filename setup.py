@@ -13,7 +13,7 @@ setup(
     python_requires=">=3.9",
     author="AMEDEO-P DT-OPTIM Team",
     description="Quantum-Enhanced Digital Twin Framework for Aerospace Systems",
-    long_description=open("README.md").read(),
+    long_description=open("README.md", encoding="utf_8").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/Robbbo-T/AMEDEO-P_DT-OPTIM",
     classifiers=[
