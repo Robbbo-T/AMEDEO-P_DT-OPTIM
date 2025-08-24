@@ -1,4 +1,0 @@
-# 02-DESIGN
-Phase: 02-DESIGN
-CI: CI-AF001-007
-Generated: Sun Aug 24 22:41:03 UTC 2025

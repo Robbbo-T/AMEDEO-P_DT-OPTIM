@@ -1,4 +1,0 @@
-# 02-DESIGN
-Phase: 02-DESIGN
-CI: CI-GA001-008
-Generated: Sun Aug 24 22:41:19 UTC 2025
