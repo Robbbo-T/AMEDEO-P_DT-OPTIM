@@ -212,6 +212,58 @@ python 00-FRAMEWORK/synthetic-core/generate.py \
 
 ---
 
+## 🏗️ Directory Structure Build System
+
+### **Automated Structure Generation**
+
+The framework includes a comprehensive directory structure builder that creates the complete AMEDEO-P system hierarchy:
+
+```bash
+# Quick setup with different modes
+./scripts/quick_build.sh
+
+# Or run directly:
+./build_structure.sh --mode minimal    # 35 systems (demo)
+./build_structure.sh --mode sample     # 392 systems (testing)  
+./build_structure.sh --mode full       # 3,920 systems (complete)
+```
+
+### **Build System Features**
+
+- **3 Build Modes**: Minimal (35), Sample (392), or Full (3,920 systems)
+- **Automated Structure**: Creates all 5 domains with proper AMEDEO-P segments
+- **CI Lifecycle**: 11-phase lifecycle for each Configuration Item
+- **Validation**: Built-in structure verification tools
+- **Documentation**: Auto-generated setup and configuration files
+
+### **Structure Output**
+```
+📊 Target Structure (Full Mode):
+- Domains: 5 (AIR, SPACE, DEFENSE, GROUND, CROSS)
+- Systems: 3,920 total across all domains
+- Configuration Items: 39,200 (10 per system)
+- Lifecycle Folders: 431,200 (11 phases per CI)
+```
+
+### **Quick Commands**
+```bash
+# Setup environment
+./scripts/setup.sh
+
+# Build structure
+./build_structure.sh --mode sample
+
+# Validate structure  
+./validate_structure.sh
+
+# View statistics
+cat STATISTICS.md
+```
+
+See [Complete Build Instructions](./docs/setup/COMPLETE-SETUP.md) for detailed setup guide.
+
+---
+
 ## 📈 Implementation Status
 
 ### Overall Progress: 72.5%
