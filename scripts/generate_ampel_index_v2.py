@@ -146,7 +146,7 @@ class AMPELGeneratorV2:
     def generate_complete_structure(self) -> Dict[str, any]:
         """Generate the enhanced AIR domain AMPEL architecture with TRL tracking"""
         print(f"\n{'='*80}")
-        print(f"AMPEL Architecture Generator v2.0 - AIR Domain")
+        print("AMPEL Architecture Generator v2.0 - AIR Domain")
         print(f"Enhanced with Technology Readiness Level (TRL) Classifications")
         print(f"Generated: {self.timestamp} UTC")
         print(f"User: Robbbo-T")
