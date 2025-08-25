@@ -257,6 +257,9 @@ ci_builds/
 *.rar
 *.7z
 
+# Generated AMPEL structures (can be recreated by running scripts)
+03-TECHNICAL-AMEDEO-P/AIR/
+
 # Backup files
 backup/
 backups/
