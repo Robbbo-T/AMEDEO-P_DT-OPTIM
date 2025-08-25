@@ -14,8 +14,23 @@ from datetime import datetime, timezone
 from typing import Dict, List, Optional, Tuple
 from enum import Enum
 
-class TRLLevel(Enum):
-    """Technology Readiness Level classifications"""
+    """
+    Technology Readiness Level (TRL) classifications.
+
+    The TRL scale is a standard framework used to assess the maturity of a particular technology,
+    ranging from basic research (TRL 1) to fully operational systems (TRL 9). This enum groups
+    TRL levels into broader categories for architectural classification:
+
+    - TRL_1_2 ("Basic Research"): Corresponds to TRL 1–2, representing fundamental principles and initial concept formulation.
+    - TRL_3_4 ("Research/Concept"): Corresponds to TRL 3–4, where active research and proof-of-concept are demonstrated.
+    - TRL_5_6 ("Prototype/Demo"): Corresponds to TRL 5–6, involving development and demonstration of prototypes in relevant environments.
+    - TRL_7_8 ("Flight Proven"): Corresponds to TRL 7–8, where the system is flight-proven through successful mission operations.
+    - TRL_9 ("Operational"): Corresponds to TRL 9, indicating the technology is fully operational and deployed.
+    - HISTORICAL ("Historical/Dormant"): Refers to architectures or technologies that are no longer active or are considered legacy.
+
+    For more information on the standard TRL framework, see:
+    https://en.wikipedia.org/wiki/Technology_readiness_level
+    """
     TRL_1_2 = "Basic Research"
     TRL_3_4 = "Research/Concept"
     TRL_5_6 = "Prototype/Demo"
