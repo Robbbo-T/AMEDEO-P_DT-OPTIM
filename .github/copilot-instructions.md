@@ -1,3 +1,10 @@
+# **GitHub Copilot Instructions - Clean Version**
+
+## **Merge Conflict Resolution**
+
+I notice there's a small merge conflict at the end of the document. Here's the clean version:
+
+```markdown
 # GitHub Copilot Instructions for AMEDEO-P DT-OPTIM
 
 ## Project Overview
@@ -159,3 +166,110 @@ Each CI must have exactly 11 phases:
 - Verify against the 11-phase lifecycle model
 - Ensure domain-specific segment interpretations are correct
 - Remember: This is educational/reference, not operational
+```
+
+---
+
+## **📋 Additional Copilot Instructions to Add**
+
+Consider adding these sections to enhance the instructions:
+
+### **Sustainability Integration**
+
+```markdown
+## Sustainability Guidelines
+
+### Environmental Tracking
+- Each system must include sustainability metrics
+- Phase 11 (SUSTAINMENT-RECYCLE-EOL) is mandatory
+- Track: carbon footprint, recyclability, energy efficiency
+- Document compliance with: ISO 14040, ICAO CORSIA, ACARE 2050
+
+### Green Coding Practices
+```python
+class SystemSustainability:
+    """Always include sustainability tracking"""
+    metrics = {
+        'carbon_footprint': float,  # tons CO2
+        'recyclable_content': float,  # percentage
+        'energy_efficiency': float,  # improvement %
+    }
+```
+```
+
+### **AMPEL-Specific Instructions**
+
+```markdown
+## AMPEL Architecture Guidelines
+
+### Complete Architecture List (41 Types)
+Always use ONLY these approved codes:
+
+**AMPEL-U (Universal)**: UNI
+**AMPEL-C (Conventional)**: TUW, BWB, HWB, FLW, TBW, BOX, JOW, TDW, CAN, TSF
+**AMPEL-D (Delta/Swept)**: DEL, VGW, FSW, OBW, CSW
+**AMPEL-M (Multi-Plane)**: BIP, TRP, MUP, STP, CHW
+**AMPEL-N (Non-Conventional)**: RNG, ANN, LFB, WIG, DUC
+**AMPEL-P (Propulsion-Int)**: DPW, BLI, PJW, FAN, CYC
+**AMPEL-A (Adaptive)**: MOR, ADP, SMT, BIO, FLD
+**AMPEL-V (Vertical/STOL)**: TLT, VTL, STO, CMP, QDR
+
+### System Number Ranges
+- 001-020: AMPEL-U
+- 021-100: AMPEL-C
+- 101-125: AMPEL-D
+- 126-150: AMPEL-M
+- 151-170: AMPEL-N
+- 171-185: AMPEL-P
+- 186-195: AMPEL-A
+- 196-200: AMPEL-V
+```
+
+### **Constituent Assembly (CA) Rules**
+
+```markdown
+## Constituent Assembly Guidelines
+
+### CA Structure
+- Each system has exactly ONE Constituent Assembly
+- CA naming: `CA-{Domain}{Segment}{System}`
+- Each CA manages exactly 10 Configuration Items
+- CA is the integration point between system and CIs
+
+### CA Documentation Required
+```yaml
+ca_metadata.yaml:
+  ca_id: string
+  system: string
+  architecture: string (must be valid AMPEL code)
+  cis: 10 (always)
+  integration_level: [baseline|standard|complex|advanced]
+```
+```
+
+### **Testing Patterns**
+
+```markdown
+## Testing Guidelines
+
+### Structure Validation
+```python
+def validate_ampel_system(system_path: Path) -> bool:
+    """Every system must pass this validation"""
+    checks = [
+        has_ca_directory(system_path),
+        has_ten_cis(system_path),
+        has_eleven_phases_per_ci(system_path),
+        has_valid_ampel_code(system_path),
+        has_metadata_files(system_path)
+    ]
+    return all(checks)
+```
+
+### Data Validation
+- Synthetic data must include timestamps
+- All telemetry must have noise component
+- Validate against physical constraints
+```
+
+This comprehensive set of instructions ensures consistent development across the AMEDEO-P DT-OPTIM framework!

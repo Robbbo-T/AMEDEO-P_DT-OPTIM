@@ -1,3 +1,10 @@
+# **AMPEL Index Generator - Clean Merged Version**
+
+## **Resolved Python Script**
+
+Here's the clean, fully merged version of `generate_ampel_index.py`:
+
+```python
 #!/usr/bin/env python3
 """
 AMPEL ARCHITECTURES Index Generator
@@ -7,8 +14,8 @@ Generates searchable index and documentation for all 200 systems
 import json
 import yaml
 from pathlib import Path
-from typing import Dict, List, Tuple
-import pandas as pd
+from typing import Dict, List, Tuple, Optional
+import sys
 
 # AMPEL Architecture definitions
 AMPEL_ARCHITECTURES = {
@@ -71,7 +78,7 @@ AMPEL_ARCHITECTURES = {
     }
 }
 
-def generate_ampel_index():
+def generate_ampel_index() -> List[Dict]:
     """Generate comprehensive AMPEL index"""
     
     index = []
@@ -100,7 +107,7 @@ def generate_ampel_index():
     
     return index
 
-def save_index(index: List[Dict], output_dir: Path):
+def save_index(index: List[Dict], output_dir: Path) -> Dict:
     """Save index in multiple formats"""
     
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -108,14 +115,26 @@ def save_index(index: List[Dict], output_dir: Path):
     # Save as JSON
     with open(output_dir / "ampel_index.json", "w") as f:
         json.dump(index, f, indent=2)
+    print("✅ JSON index saved")
     
     # Save as YAML
     with open(output_dir / "ampel_index.yaml", "w") as f:
         yaml.dump(index, f, default_flow_style=False)
+    print("✅ YAML index saved")
     
-    # Save as CSV
-    df = pd.DataFrame(index)
-    df.to_csv(output_dir / "ampel_index.csv", index=False)
+    # Save as CSV with error handling
+    try:
+        import pandas as pd
+        df = pd.DataFrame(index)
+        # Flatten the configuration_items list for CSV
+        df['configuration_items'] = df['configuration_items'].apply(lambda x: ', '.join(x))
+        df.to_csv(output_dir / "ampel_index.csv", index=False)
+        print("✅ CSV index saved")
+    except ImportError:
+        print("⚠️  pandas is not installed. Skipping CSV export.")
+        print("   Install with: pip install pandas")
+    except Exception as e:
+        print(f"⚠️  Failed to export CSV: {e}")
     
     # Generate statistics
     stats = {
@@ -125,22 +144,208 @@ def save_index(index: List[Dict], output_dir: Path):
         "categories": len(AMPEL_ARCHITECTURES),
         "architecture_types": sum(
             len(archs) for archs in AMPEL_ARCHITECTURES.values()
-        )
+        ),
+        "systems_by_category": {}
     }
+    
+    # Count systems per category
+    for category in AMPEL_ARCHITECTURES:
+        stats["systems_by_category"][category] = sum(
+            1 for item in index if item["category"] == category
+        )
     
     with open(output_dir / "ampel_statistics.json", "w") as f:
         json.dump(stats, f, indent=2)
-    
-    print(f"✅ AMPEL Index generated with {len(index)} systems")
-    print(f"📁 Output saved to {output_dir}")
+    print("✅ Statistics saved")
     
     return stats
 
-if __name__ == "__main__":
+def generate_markdown_report(index: List[Dict], output_dir: Path):
+    """Generate a markdown report of the AMPEL index"""
+    
+    report = ["# AMPEL ARCHITECTURES Index Report\n"]
+    report.append(f"Generated: {Path.cwd()}\n")
+    report.append(f"Total Systems: {len(index)}\n\n")
+    
+    report.append("## System Distribution by Category\n\n")
+    
+    current_category = None
+    for item in index:
+        if item["category"] != current_category:
+            current_category = item["category"]
+            report.append(f"\n### {current_category}\n\n")
+            report.append("| System ID | Architecture | CA | CIs |\n")
+            report.append("|-----------|--------------|----|----- |\n")
+        
+        report.append(
+            f"| {item['system_id']} | "
+            f"{item['architecture_name']} | "
+            f"{item['constituent_assembly']} | "
+            f"{item['total_cis']} |\n"
+        )
+    
+    with open(output_dir / "ampel_index_report.md", "w") as f:
+        f.writelines(report)
+    
+    print("✅ Markdown report saved")
+
+def validate_index(index: List[Dict]) -> bool:
+    """Validate the generated index for completeness"""
+    
+    print("\n🔍 Validating index...")
+    
+    # Check for 200 systems
+    if len(index) != 200:
+        print(f"❌ Expected 200 systems, found {len(index)}")
+        return False
+    
+    # Check system numbering continuity
+    system_numbers = sorted([item["system_number"] for item in index])
+    expected_numbers = list(range(1, 201))
+    
+    if system_numbers != expected_numbers:
+        missing = set(expected_numbers) - set(system_numbers)
+        if missing:
+            print(f"❌ Missing system numbers: {missing}")
+        return False
+    
+    # Check architecture codes
+    all_codes = set()
+    for category in AMPEL_ARCHITECTURES.values():
+        all_codes.update(category.keys())
+    
+    index_codes = set(item["architecture_code"] for item in index)
+    
+    if all_codes != index_codes:
+        print(f"❌ Architecture code mismatch")
+        return False
+    
+    print("✅ Index validation passed")
+    return True
+
+def main():
+    """Main execution function"""
+    
+    print("=" * 60)
+    print("AMPEL ARCHITECTURES Index Generator")
+    print("=" * 60)
+    print()
+    
+    # Set base directory
     base_dir = Path("03-TECHNICAL-AMEDEO-P/AIR/Airframes/AMPEL-REGISTRY")
+    
+    # Generate index
+    print("📊 Generating AMPEL index...")
     index = generate_ampel_index()
+    
+    # Validate index
+    if not validate_index(index):
+        print("❌ Index validation failed!")
+        sys.exit(1)
+    
+    # Save index in multiple formats
+    print(f"\n💾 Saving to {base_dir}...")
     stats = save_index(index, base_dir)
     
-    print("\n📊 AMPEL Statistics:")
+    # Generate markdown report
+    generate_markdown_report(index, base_dir)
+    
+    # Display statistics
+    print("\n" + "=" * 60)
+    print("📊 AMPEL Statistics:")
+    print("=" * 60)
     for key, value in stats.items():
-        print(f"  {key}: {value:,}")
+        if key == "systems_by_category":
+            print(f"\nSystems by Category:")
+            for cat, count in value.items():
+                print(f"  {cat}: {count:,}")
+        else:
+            print(f"{key}: {value:,}")
+    
+    print("\n" + "=" * 60)
+    print("✅ AMPEL Index generation complete!")
+    print("=" * 60)
+
+if __name__ == "__main__":
+    main()
+```
+
+## **📋 Key Improvements in Merged Version**
+
+1. **Better Error Handling** - Gracefully handles missing pandas dependency
+2. **Type Hints** - Added proper type hints for better code clarity
+3. **Validation Function** - Validates index completeness
+4. **Markdown Report** - Generates human-readable report
+5. **Enhanced Statistics** - Includes systems per category breakdown
+6. **CSV Flattening** - Properly handles list fields for CSV export
+7. **Main Function** - Better structured execution flow
+8. **Progress Indicators** - Clear status messages throughout
+
+## **🚀 Usage Instructions**
+
+```bash
+# Make the script executable
+chmod +x generate_ampel_index.py
+
+# Run the script
+python3 generate_ampel_index.py
+
+# If pandas is not installed (optional for CSV)
+pip install pandas
+
+# Check the generated files
+ls -la 03-TECHNICAL-AMEDEO-P/AIR/Airframes/AMPEL-REGISTRY/
+```
+
+## **📁 Output Files**
+
+The script generates:
+
+1. **ampel_index.json** - Complete index in JSON format
+2. **ampel_index.yaml** - Complete index in YAML format
+3. **ampel_index.csv** - Tabular index (if pandas installed)
+4. **ampel_statistics.json** - Statistical summary
+5. **ampel_index_report.md** - Human-readable markdown report
+
+## **📊 Expected Output**
+
+```
+============================================================
+AMPEL ARCHITECTURES Index Generator
+============================================================
+
+📊 Generating AMPEL index...
+
+🔍 Validating index...
+✅ Index validation passed
+
+💾 Saving to 03-TECHNICAL-AMEDEO-P/AIR/Airframes/AMPEL-REGISTRY...
+✅ JSON index saved
+✅ YAML index saved
+✅ CSV index saved
+✅ Statistics saved
+✅ Markdown report saved
+
+============================================================
+📊 AMPEL Statistics:
+============================================================
+total_systems: 200
+total_cis: 2,000
+total_folders: 22,000
+categories: 8
+architecture_types: 41
+
+Systems by Category:
+  AMPEL-U: 20
+  AMPEL-C: 80
+  AMPEL-D: 25
+  AMPEL-M: 25
+  AMPEL-N: 20
+  AMPEL-P: 15
+  AMPEL-A: 10
+  AMPEL-V: 5
+
+============================================================
+✅ AMPEL Index generation complete!
+============================================================
+```
