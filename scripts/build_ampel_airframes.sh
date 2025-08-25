@@ -30,17 +30,17 @@ create_lifecycle_phases() {
     local arch_type=$3
     
     local phases=(
-        "01-REQUIREMENTS"
-        "02-DESIGN"
-        "03-BUILDING-PROTOTYPING"
-        "04-EXECUTABLES-PACKAGES"
-        "05-VERIFICATION-VALIDATION"
-        "06-INTEGRATION-QUALIFICATION"
-        "07-CERTIFICATION-SECURITY"
-        "08-PRODUCTION-SCALE"
-        "09-OPS-SERVICES"
+        "01-Requirements"
+        "02-Design"
+        "03-Building-Prototyping"
+        "04-Executables-Packages"
+        "05-Verification-Validation"
+        "06-Integration-Qualification"
+        "07-Certification-Security"
+        "08-Production-Scale"
+        "09-Ops-Services"
         "10-MRO"
-        "11-SUSTAINMENT-RECYCLE-EOL"
+        "11-Sustainment-Recycle"
     )
     
     for phase in "${phases[@]}"; do

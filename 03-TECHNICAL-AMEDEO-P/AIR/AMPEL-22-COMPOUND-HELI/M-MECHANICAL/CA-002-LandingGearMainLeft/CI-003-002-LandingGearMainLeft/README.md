@@ -9,17 +9,17 @@
 Configuration Item for Compound Helicopter architecture component.
 
 ## Lifecycle Status
-- [ ] 01-REQUIREMENTS
-- [ ] 02-DESIGN
-- [ ] 03-PROTOTYPING
-- [ ] 04-MANUFACTURING
-- [ ] 05-VERIFICATION
-- [ ] 06-INTEGRATION
-- [ ] 07-CERTIFICATION
-- [ ] 08-PRODUCTION
-- [ ] 09-OPERATIONS
-- [ ] 10-MAINTENANCE
-- [ ] 11-DISPOSAL
+- [ ] 01-Requirements
+- [ ] 02-Design
+- [ ] 03-Building-Prototyping
+- [ ] 04-Executables-Packages
+- [ ] 05-Verification-Validation
+- [ ] 06-Integration-Qualification
+- [ ] 07-Certification-Security
+- [ ] 08-Production-Scale
+- [ ] 09-Ops-Services
+- [ ] 10-MRO
+- [ ] 11-Sustainment-Recycle
 
 ## Compliance
 - FAA Part 25
