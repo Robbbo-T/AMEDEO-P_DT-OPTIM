@@ -1,0 +1,8 @@
+# Link Object: CI-003.lo
+# Vínculo al Ítem de Configuración del Sistema del Tren de Aterrizaje de Nariz
+
+link_target: CI-003-001-FuselageNoseSection
+link_type: Configuration Item Reference
+description: Sistema del Tren de Aterrizaje de Nariz
+provider: Proveedor de Sistemas de Aterrizaje
+status: active

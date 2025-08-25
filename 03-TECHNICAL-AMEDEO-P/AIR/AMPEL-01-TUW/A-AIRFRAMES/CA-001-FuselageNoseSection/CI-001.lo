@@ -1,0 +1,8 @@
+# Link Object: CI-001.lo
+# Vínculo al Ítem de Configuración de la Estructura Primaria y Secundaria
+
+link_target: CI-001-001-FuselageNoseSection
+link_type: Configuration Item Reference
+description: Estructura Primaria y Secundaria
+provider: Proveedor de Aeroestructuras
+status: active
