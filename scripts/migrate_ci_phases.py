@@ -24,16 +24,7 @@ PHASE_MAPPING = {
     "10-MAINTENANCE": "10-MRO",
     "11-DISPOSAL": "11-Sustainment-Recycle",
     # From shell scripts (partially correct but with wrong 11th phase)
-    "01-Requirements": "01-Requirements",  # already correct
-    "02-Design": "02-Design",  # already correct
-    "03-Building-Prototyping": "03-Building-Prototyping",  # already correct
-    "04-Executables-Packages": "04-Executables-Packages",  # already correct
-    "05-Verification-Validation": "05-Verification-Validation",  # already correct
-    "06-Integration-Qualification": "06-Integration-Qualification",  # already correct
-    "07-Certification-Security": "07-Certification-Security",  # already correct
-    "08-Production-Scale": "08-Production-Scale",  # already correct
-    "09-Ops-Services": "09-Ops-Services",  # already correct
-    "10-MRO": "10-MRO",  # already correct
+# (Removed redundant identity mappings for canonical phases)
     "11-SUSTAINMENT-RECYCLE-EOL": "11-Sustainment-Recycle",
     "11-Sustainment-Recycle-EOL": "11-Sustainment-Recycle"
 }
