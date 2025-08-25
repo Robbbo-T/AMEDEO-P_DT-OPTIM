@@ -1,0 +1,24 @@
+# Constituent Assembly Metadata
+ca_entity:
+  id: CA-AF102
+  name: "NacelleInletLipskinStructure Primary Assembly"
+  system: System-102-NacelleInletLipskinStructure
+  domain: AIR
+  segment: Airframes_Structures
+  
+classification:
+  category: Propulsion
+  system_type: Structural_Assembly
+  system_name: "NacelleInletLipskinStructure"
+  
+structure:
+  total_cis: 10
+  lifecycle_phases_per_ci: 11
+  total_lifecycle_points: 110
+  
+compliance:
+  standards:
+    - "FAA Part 25"
+    - "EASA CS-25"
+    - "DO-178C"
+    - "DO-254"

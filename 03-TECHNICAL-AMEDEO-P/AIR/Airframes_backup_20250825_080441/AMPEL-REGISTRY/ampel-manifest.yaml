@@ -1,0 +1,28 @@
+# AMPEL ARCHITECTURES Manifest
+# Version: 1.0.0
+# Part of AMEDEO-P DT-OPTIM Framework
+
+ampel_framework:
+  version: "1.0.0"
+  total_architectures: 41
+  total_systems: 200
+  total_cis: 2000
+  integration: "AMEDEO-P AIR Domain"
+  
+  statistics:
+    categories: 8
+    conventional_architectures: 10
+    advanced_architectures: 31
+    lifecycle_phases_per_ci: 11
+    total_lifecycle_folders: 22000
+    
+  compliance:
+    standards:
+      - "DO-178C"
+      - "DO-254"
+      - "ARP4754A"
+      - "ISO/IEC 15288"
+    certifications:
+      - "FAA Part 25"
+      - "EASA CS-25"
+      - "MIL-STD-1530D"
