@@ -910,7 +910,7 @@ and innovative research concepts.
 *Audit Date: 2025-08-25*
 """
         
-        with open(report_path, 'w') as f:
+        with open(report_path, 'w', encoding='utf_8') as f:
             f.write(content)
     
     def _create_validation_report(self, stats: Dict):
