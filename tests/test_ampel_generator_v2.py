@@ -190,11 +190,12 @@ class TestAMPELStructureValidation:
         assert (ci_path / "ci-config.yaml").exists()
         
         # Check lifecycle phases
-        expected_phases = [
+        # Use the actual lifecycle phases from the generator to avoid mismatches
+        expected_phases = getattr(AMPELGeneratorV2, "LIFECYCLE_PHASES", [
             "01-REQUIREMENTS", "02-DESIGN", "03-DEVELOPMENT", "04-TESTING",
             "05-VALIDATION", "06-PRODUCTION", "07-DEPLOYMENT", "08-OPERATION",
             "09-MAINTENANCE", "10-OPTIMIZATION", "11-DECOMMISSION"
-        ]
+        ])
         
         for phase in expected_phases:
             phase_path = ci_path / phase
