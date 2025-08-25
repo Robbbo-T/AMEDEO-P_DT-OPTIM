@@ -1,0 +1,24 @@
+# Constituent Assembly Metadata
+ca_entity:
+  id: CA-AF103
+  name: "NacelleInletDuctStructure Primary Assembly"
+  system: System-103-NacelleInletDuctStructure
+  domain: AIR
+  segment: Airframes_Structures
+  
+classification:
+  category: Propulsion
+  system_type: Structural_Assembly
+  system_name: "NacelleInletDuctStructure"
+  
+structure:
+  total_cis: 10
+  lifecycle_phases_per_ci: 11
+  total_lifecycle_points: 110
+  
+compliance:
+  standards:
+    - "FAA Part 25"
+    - "EASA CS-25"
+    - "DO-178C"
+    - "DO-254"

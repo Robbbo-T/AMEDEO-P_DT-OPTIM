@@ -1,0 +1,24 @@
+# Constituent Assembly Metadata
+ca_entity:
+  id: CA-AF105
+  name: "FanCowlHingeAndLatchStructure Primary Assembly"
+  system: System-105-FanCowlHingeAndLatchStructure
+  domain: AIR
+  segment: Airframes_Structures
+  
+classification:
+  category: Propulsion
+  system_type: Structural_Assembly
+  system_name: "FanCowlHingeAndLatchStructure"
+  
+structure:
+  total_cis: 10
+  lifecycle_phases_per_ci: 11
+  total_lifecycle_points: 110
+  
+compliance:
+  standards:
+    - "FAA Part 25"
+    - "EASA CS-25"
+    - "DO-178C"
+    - "DO-254"
