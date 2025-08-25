@@ -15,7 +15,7 @@ def test_single_ci():
         print(f"Test CI not found: {test_ci}")
         return
     
-    print(f"Before migration:")
+    print("Before migration:")
     for item in sorted(test_ci.iterdir()):
         print(f"  {item.name}")
     
