@@ -5,8 +5,7 @@
 **Constituent Assembly**: CA-001-FuselageNoseSection
 **Lifecycle Phases**: 11
 
-## CI Overview
-Configuration Item for Tube Wing architecture component.
+The CI-006-001-FuselageNoseSection configuration item comprises the hydraulic systems and external sensors integrated within the nose section of the Tube Wing aircraft. These hydraulic systems are responsible for actuating critical components such as nose landing gear, steering mechanisms, and selected flight control surfaces. The external sensors include air data probes, angle-of-attack sensors, and environmental monitoring devices, providing essential inputs for flight control, navigation, and safety systems. This configuration item ensures reliable operation and accurate data acquisition, supporting both ground and in-flight operations as part of the overall aircraft architecture.
 
 ## Lifecycle Status
 - [ ] 01-REQUIREMENTS
