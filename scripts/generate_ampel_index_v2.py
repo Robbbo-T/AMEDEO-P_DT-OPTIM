@@ -875,7 +875,7 @@ Research phase and conceptual studies:
             if TRLLevel.TRL_3_4.value in ampel_data['trl']:
                 content += f"- **AMPEL-{ampel_data['number']:02d}-{ampel_data['code']}**: {ampel_data['description']}\n"
         
-        content += f"""
+        content += """
 #### Historical/Dormant
 Past programs and dormant technologies:
 """
