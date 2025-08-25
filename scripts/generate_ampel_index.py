@@ -114,8 +114,13 @@ def save_index(index: List[Dict], output_dir: Path):
         yaml.dump(index, f, default_flow_style=False)
     
     # Save as CSV
-    df = pd.DataFrame(index)
-    df.to_csv(output_dir / "ampel_index.csv", index=False)
+    try:
+        df = pd.DataFrame(index)
+        df.to_csv(output_dir / "ampel_index.csv", index=False)
+    except ImportError:
+        print("⚠️  pandas is not installed. Skipping CSV export.")
+    except Exception as e:
+        print(f"⚠️  Failed to export CSV: {e}")
     
     # Generate statistics
     stats = {
