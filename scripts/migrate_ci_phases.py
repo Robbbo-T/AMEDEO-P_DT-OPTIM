@@ -84,7 +84,7 @@ def update_ci_readme(ci_dir: Path, phase_changes: Dict[str, str]) -> None:
         print(f"  No README.md found in {ci_dir}")
         return
     
-    print(f"  Updating README.md")
+    print("  Updating README.md")
     
     try:
         with open(readme_path, 'r', encoding='utf-8') as f:
