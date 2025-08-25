@@ -165,7 +165,7 @@ def main():
             print(f"ERROR processing {ci_dir}: {e}")
             failed_migrations += 1
     
-    print(f"\nMigration completed:")
+    print("\nMigration completed:")
     print(f"  Successful: {successful_migrations}")
     print(f"  Failed: {failed_migrations}")
     print(f"  Total: {len(ci_dirs)}")
