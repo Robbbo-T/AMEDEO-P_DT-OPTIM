@@ -103,7 +103,7 @@ def main():
     if readme_path.exists():
         with open(readme_path, 'r') as f:
             content = f.read()
-        print(f"\nUpdated README lifecycle section:")
+        print("\nUpdated README lifecycle section:")
         lines = content.split('\n')
         for line in lines:
             if '- [ ]' in line or '- [x]' in line:
