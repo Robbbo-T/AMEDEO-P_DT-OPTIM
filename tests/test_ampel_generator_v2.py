@@ -8,11 +8,11 @@ import json
 import pytest
 from pathlib import Path
 
-# Add the scripts directory to the path to import the generator
-sys.path.insert(0, 'scripts')
+# Import the generator from the scripts package
+
 
 try:
-    from generate_ampel_index_v2 import AMPELGeneratorV2, TRLLevel
+    from scripts.generate_ampel_index_v2 import AMPELGeneratorV2, TRLLevel
 except ImportError:
     pytest.skip("AMPEL Generator v2.0 not available", allow_module_level=True)
 
