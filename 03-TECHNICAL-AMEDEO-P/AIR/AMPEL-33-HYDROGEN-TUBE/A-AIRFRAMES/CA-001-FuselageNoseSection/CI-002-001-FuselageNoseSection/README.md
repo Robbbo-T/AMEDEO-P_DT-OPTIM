@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-33-HYDROGEN-TUBE
 **Architecture**: Hydrogen Tube Wing
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

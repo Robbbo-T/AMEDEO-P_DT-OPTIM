@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-18-HYBRID-AIRSHIP
 **Architecture**: Hybrid Airship
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

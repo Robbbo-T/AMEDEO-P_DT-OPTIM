@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-23-AUTOGYRO
 **Architecture**: Autogyro
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

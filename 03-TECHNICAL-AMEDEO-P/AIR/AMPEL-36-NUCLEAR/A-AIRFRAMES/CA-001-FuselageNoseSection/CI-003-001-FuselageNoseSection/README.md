@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-36-NUCLEAR
 **Architecture**: Nuclear Powered
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-19-VTOL-JET
 **Architecture**: VTOL Jet
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

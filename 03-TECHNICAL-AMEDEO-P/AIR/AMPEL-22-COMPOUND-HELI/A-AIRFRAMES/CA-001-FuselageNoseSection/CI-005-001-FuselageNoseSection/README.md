@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-22-COMPOUND-HELI
 **Architecture**: Compound Helicopter
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview
