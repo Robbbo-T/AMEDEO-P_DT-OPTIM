@@ -1,0 +1,8 @@
+# Link Object: CI-005.lo
+# Vínculo al Ítem de Configuración del Sistema de Cableado e Interconexión (EWIS)
+
+link_target: CI-005-001-FuselageNoseSection
+link_type: Configuration Item Reference
+description: Sistema de Cableado e Interconexión (EWIS)
+provider: Proveedor de Sistemas de Potencia
+status: active

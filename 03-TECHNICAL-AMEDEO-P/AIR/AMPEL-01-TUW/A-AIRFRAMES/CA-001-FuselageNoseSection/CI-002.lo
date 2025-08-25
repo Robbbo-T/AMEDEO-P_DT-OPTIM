@@ -1,0 +1,8 @@
+# Link Object: CI-002.lo
+# Vínculo al Ítem de Configuración de Sistemas de Aviónica Integrados
+
+link_target: CI-002-001-FuselageNoseSection
+link_type: Configuration Item Reference
+description: Sistemas de Aviónica Integrados
+provider: Integrador de Sistemas de Aviónica
+status: active

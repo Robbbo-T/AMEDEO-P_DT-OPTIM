@@ -1,0 +1,8 @@
+# Link Object: CI-004.lo
+# Vínculo al Ítem de Configuración de Sistemas de Control Ambiental (ECS)
+
+link_target: CI-004-001-FuselageNoseSection
+link_type: Configuration Item Reference
+description: Sistemas de Control Ambiental (ECS)
+provider: Proveedor de Sistemas de Cabina
+status: active

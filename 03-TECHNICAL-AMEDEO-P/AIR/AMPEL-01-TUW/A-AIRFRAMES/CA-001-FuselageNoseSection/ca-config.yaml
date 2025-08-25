@@ -1,0 +1,49 @@
+ca:
+  name: CA-001-FuselageNoseSection
+  segment: A-AIRFRAMES
+  type: Constituent Assembly
+  ampel: AMPEL-01-TUW
+  architecture: Tube Wing
+  description: Sección 41 del Fuselaje (Morro)
+  integrator: AMEDEO Aerospace
+  status: ACTIVE - PRODUCTION
+
+configuration_items:
+  - id: CI-001
+    name: Estructura Primaria y Secundaria
+    provider: Proveedor de Aeroestructuras
+    directory: CI-001-001-FuselageNoseSection
+  - id: CI-002
+    name: Sistemas de Aviónica Integrados
+    provider: Integrador de Sistemas de Aviónica
+    directory: CI-002-001-FuselageNoseSection
+  - id: CI-003
+    name: Sistema del Tren de Aterrizaje de Nariz
+    provider: Proveedor de Sistemas de Aterrizaje
+    directory: CI-003-001-FuselageNoseSection
+  - id: CI-004
+    name: Sistemas de Control Ambiental (ECS)
+    provider: Proveedor de Sistemas de Cabina
+    directory: CI-004-001-FuselageNoseSection
+  - id: CI-005
+    name: Sistema de Cableado e Interconexión (EWIS)
+    provider: Proveedor de Sistemas de Potencia
+    directory: CI-005-001-FuselageNoseSection
+  - id: CI-006
+    name: Sistemas Hidráulicos y Sensores Externos
+    provider: Proveedor de Sistemas y Sensores
+    directory: CI-006-001-FuselageNoseSection
+
+certification_basis:
+  - FAR 25.301 - Cargas
+  - FAR 25.365 - Estructura de Compartimientos Presurizados
+  - FAR 25.561 - Aterrizaje de Emergencia
+  - FAR 25.729 - Requisitos del Tren de Aterrizaje Retráctil
+  - FAR 25.775 - Ventanas y Parabrisas
+  - FAR 25.841 - Presurización de Cabina
+  - FAR 25.1309 - Equipos, Sistemas e Instalaciones
+  - FAR 25.1707 - Sistema de Cableado e Interconexión Eléctrica (EWIS)
+
+metadata:
+  created: 2024-12-19
+  status: active
