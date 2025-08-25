@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-09-DP
 **Architecture**: Distributed Propulsion
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

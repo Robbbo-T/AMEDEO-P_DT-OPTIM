@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-26-STOL
 **Architecture**: Short Take-Off and Landing
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

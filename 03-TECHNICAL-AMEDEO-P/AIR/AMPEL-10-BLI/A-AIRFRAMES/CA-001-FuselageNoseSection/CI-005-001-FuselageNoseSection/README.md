@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-10-BLI
 **Architecture**: Boundary Layer Ingestion
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

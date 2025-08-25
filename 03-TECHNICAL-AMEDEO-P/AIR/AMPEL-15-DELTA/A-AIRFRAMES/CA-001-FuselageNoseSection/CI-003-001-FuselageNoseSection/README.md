@@ -2,7 +2,7 @@
 
 **AMPEL**: AMPEL-15-DELTA
 **Architecture**: Delta Wing
-**Constituent Assembly**: CA-001-FuselageNoseSection
+**Constituent Assembly**: [CA-001-FuselageNoseSection](../)
 **Lifecycle Phases**: 11
 
 ## CI Overview

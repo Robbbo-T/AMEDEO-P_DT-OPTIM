@@ -24,12 +24,12 @@ El `CA-001` está compuesto por seis Ítems de Configuración primarios. Cada CI
 
 | ID del CI | Ítem de Configuración | Rol del Proveedor / Integrador |
 | :--- | :--- | :--- |
-| **`CI-001`** | Estructura Primaria y Secundaria | Proveedor de Aeroestructuras |
-| **`CI-002`** | Sistemas de Aviónica Integrados | Integrador de Sistemas de Aviónica |
-| **`CI-003`** | Sistema del Tren de Aterrizaje de Nariz | Proveedor de Sistemas de Aterrizaje |
-| **`CI-004`** | Sistemas de Control Ambiental (ECS) | Proveedor de Sistemas de Cabina |
-| **`CI-005`** | Sistema de Cableado e Interconexión (EWIS)| Proveedor de Sistemas de Potencia |
-| **`CI-006`** | Sistemas Hidráulicos y Sensores Externos| Proveedor de Sistemas y Sensores |
+| **[`CI-001`](./CI-001-001-FuselageNoseSection/)** | Estructura Primaria y Secundaria | Proveedor de Aeroestructuras |
+| **[`CI-002`](./CI-002-001-FuselageNoseSection/)** | Sistemas de Aviónica Integrados | Integrador de Sistemas de Aviónica |
+| **[`CI-003`](./CI-003-001-FuselageNoseSection/)** | Sistema del Tren de Aterrizaje de Nariz | Proveedor de Sistemas de Aterrizaje |
+| **[`CI-004`](./CI-004-001-FuselageNoseSection/)** | Sistemas de Control Ambiental (ECS) | Proveedor de Sistemas de Cabina |
+| **[`CI-005`](./CI-005-001-FuselageNoseSection/)** | Sistema de Cableado e Interconexión (EWIS)| Proveedor de Sistemas de Potencia |
+| **[`CI-006`](./CI-006-001-FuselageNoseSection/)** | Sistemas Hidráulicos y Sensores Externos| Proveedor de Sistemas y Sensores |
 
 ## 3.0 Control Maestro de Interfaces
 
