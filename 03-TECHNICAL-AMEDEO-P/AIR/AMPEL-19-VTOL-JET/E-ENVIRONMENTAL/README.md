@@ -1,0 +1,16 @@
+# E Environmental
+
+**AMPEL**: AMPEL-19-VTOL-JET
+**Architecture**: VTOL Jet
+**Description**: Environmental Control Systems
+**Constituent Assemblies**: 10
+**Configuration Items per CA**: 5
+
+## Overview
+Environmental Control Systems for VTOL Jet architecture.
+
+## Structure
+- Constituent Assemblies: 10
+- Configuration Items: 50
+- Lifecycle Phases: 11 per CI
+- Total Folders: 550
